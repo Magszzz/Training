@@ -56,12 +56,12 @@ const animate = () => {
     })
     .staggerFromTo(
       ['.frame2-text1', '.frame2-text2', '.frame2-text3'],
-      0.2,
+      1,
       {
         alpha: 0,
         y: 10,
       },
-      { alpha: 1, y: 0, stagger: 0.1 },
+      { alpha: 1, y: 0, stagger: 0.2 },
     )
     .to(['.frame2-text1', '.frame2-text2', '.frame2-text3'], 0, {
       alpha: 0,
@@ -74,7 +74,7 @@ const animate = () => {
         alpha: 0,
         y: 10,
       },
-      { alpha: 1, y: 0, stagger: 0.1, delay: 0.5 },
+      { alpha: 1, y: 0, stagger: 0.2, delay: 0.5 },
     )
     .to('.frame2', 0, {
       alpha: 0,
@@ -93,7 +93,7 @@ const animate = () => {
         alpha: 0,
         y: 10,
       },
-      { alpha: 1, y: 0, stagger: 0.1, delay: 0.5 },
+      { alpha: 1, y: 0, stagger: 0.2, delay: 0.5 },
     )
 }
 
