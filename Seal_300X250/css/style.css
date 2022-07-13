@@ -31,46 +31,67 @@
 /* frame1 */
 
 .frame1 {
-  z-index: 1;
+  z-index: 4;
 }
 
 .frame1-bg {
-  z-index: 2;
+  z-index: 3;
   transform: scale(1.5);
 }
 
 .frame1-img {
-  z-index: 2;
+  z-index: 3;
 }
 
 .frame1-text1 {
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
 }
 .frame1-text2 {
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
 }
 .frame1-text3 {
-  z-index: 2;
+  z-index: 3;
   opacity: 0;
 }
 
 /* frame2 */
 
-.frame2 {
+.frame2-text1 {
   z-index: 3;
+}
+.frame2-text2,
+.frame2-text3,
+.frame3-text1,
+.frame3-text2,
+.frame3-text3,
+.frame3-text4 {
+  z-index: 3;
+  opacity: 0;
 }
 
 .terms {
-  color: white;
   font-size: 9px;
+  color: #ffff;
   font-family: 'FoxtelText', arial;
   font-weight: 400;
   line-height: 9px;
-  bottom: 12px;
   text-align: center;
-  left: 0;
-  right: 0;
   letter-spacing: 0px;
+  bottom: 12px;
+  left: 0px;
+  right: 0px;
+}
+
+.frame4 {
+  opacity: 0;
+}
+
+.frame4-text1,
+.frame4-text2,
+.frame4-text3,
+.frame4-btn,
+.frame4-logo {
+  opacity: 0;
 }

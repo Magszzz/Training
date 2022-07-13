@@ -51,6 +51,50 @@ const animate = () => {
       },
       '-=2.5',
     )
+    .to('.frame1', 0, {
+      alpha: 0,
+    })
+    .staggerFromTo(
+      ['.frame2-text1', '.frame2-text2', '.frame2-text3'],
+      0.2,
+      {
+        alpha: 0,
+        y: 10,
+      },
+      { alpha: 1, y: 0, stagger: 0.1 },
+    )
+    .to(['.frame2-text1', '.frame2-text2', '.frame2-text3'], 0, {
+      alpha: 0,
+      delay: 0.8,
+    })
+    .staggerFromTo(
+      ['.frame3-text1', '.frame3-text2', '.frame3-text3', '.frame3-text4'],
+      1,
+      {
+        alpha: 0,
+        y: 10,
+      },
+      { alpha: 1, y: 0, stagger: 0.1, delay: 0.5 },
+    )
+    .to('.frame2', 0, {
+      alpha: 0,
+      delay: 0.8,
+    })
+    .set('.frame4', {
+      alpha: 1,
+    })
+    .to('.frame4-logo', 1, {
+      opacity: 1,
+    })
+    .staggerFromTo(
+      ['.frame4-text1', '.frame4-text2', '.frame4-text3', '.frame4-btn'],
+      1,
+      {
+        alpha: 0,
+        y: 10,
+      },
+      { alpha: 1, y: 0, stagger: 0.1, delay: 0.5 },
+    )
 }
 
 animate()
