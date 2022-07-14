@@ -1,4 +1,4 @@
-var rectPercent = [76, 67, 59]
+var rectPercent = [65, 70, 76]
 
 const animation4 = () => {
   const tl = new TimelineMax({
@@ -10,13 +10,13 @@ const animation4 = () => {
 
   tl.addLabel('in', 1)
     .set('.frame4 .rect-top', {
-      yPercent: -100,
+      xPercent: -100,
     })
     .staggerTo(
       '.frame3 .rect-mask',
       0.7,
       {
-        yPercent: 100,
+        xPercent: 100,
         ease: Power3.easeOut,
       },
       0.15,
@@ -26,7 +26,7 @@ const animation4 = () => {
       '.frame4 .rect-inner',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -37,10 +37,6 @@ const animation4 = () => {
     .from('.frame4 .txt04', 0.2, {
       y: 10,
       opacity: 0,
-    })
-    .to('.logo', 0.2, {
-      y: -10,
-      ease: Power3.easeOut,
     })
     .from('.frame4 .disc03', 0.2, {
       y: 10,
@@ -53,9 +49,17 @@ const animation4 = () => {
     .to('.border', 0.5, {
       scaleX: 0.01,
     })
-    .to('.br', 0.5, {
-      x: 125,
+    .to('.bl', 0.5, {
+      x: -110,
     })
+    .to(
+      '.br',
+      0.5,
+      {
+        x: 110,
+      },
+      '-=0.5',
+    )
     .from('.frame4 .btn', 0.2, {
       opacity: 0,
     })
@@ -73,13 +77,13 @@ const animation3 = () => {
 
   tl.addLabel('in', 1)
     .set('.frame3 .rect-top', {
-      yPercent: -100,
+      xPercent: -100,
     })
     .staggerTo(
       '.frame2 .rect-mask',
       0.7,
       {
-        yPercent: 100,
+        xPercent: 100,
         ease: Power3.easeOut,
       },
       0.15,
@@ -89,7 +93,7 @@ const animation3 = () => {
       '.frame3 .rect-outer',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -103,7 +107,7 @@ const animation3 = () => {
       '.frame3 .rect-inner',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -119,7 +123,7 @@ const animation3 = () => {
       '.frame3 .rect-full',
       1,
       {
-        yPercent: 0,
+        xPercent: 0,
         stagger: 0.1,
         ease: Power3.easeOut,
         delay: 0.5,
@@ -143,13 +147,13 @@ const animation2 = () => {
 
   tl.addLabel('in', 1)
     .set('.frame2 .rect-top', {
-      yPercent: -100,
+      xPercent: -100,
     })
     .staggerTo(
       '.frame1 .rect-mask',
       0.7,
       {
-        yPercent: 100,
+        xPercent: 100,
         ease: Power3.easeOut,
       },
       0.15,
@@ -159,7 +163,7 @@ const animation2 = () => {
       '.frame2 .rect-outer',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -173,7 +177,7 @@ const animation2 = () => {
       '.frame2 .rect-inner',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -185,7 +189,7 @@ const animation2 = () => {
       '.frame2 .rect-full',
       1,
       {
-        yPercent: 0,
+        xPercent: 0,
         stagger: 0.1,
         ease: Power3.easeOut,
       },
@@ -207,7 +211,7 @@ const animate = () => {
     alpha: 0,
   })
     .set('.frame1 .rect-top', {
-      yPercent: -100,
+      xPercent: -100,
     })
     .to('#banner', 0.4, { opacity: 1 }, 0.3)
     .staggerTo('.common', 0.5, {
@@ -218,7 +222,7 @@ const animate = () => {
       '.frame1-rect1',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         ease: Power3.easeOut,
@@ -230,7 +234,7 @@ const animate = () => {
       '.frame1-rectT1',
       1,
       {
-        yPercent: function (index, elem) {
+        xPercent: function (index, elem) {
           return rectPercent[$(elem).index()]
         },
         stagger: 0.1,
@@ -252,7 +256,7 @@ const animate = () => {
       '.frame1 .rect-full',
       1,
       {
-        yPercent: 0,
+        xPercent: 0,
         stagger: 0.1,
         ease: Power3.easeOut,
       },
